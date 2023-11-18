@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         val shareBtn: ImageView = findViewById(R.id.shareBtn)
 
         // Actual OpenAI API key
-        val apiKey = "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"
+        val apiKey = "Actual OpenAI API key"
 
         val openAI = OpenAI(apiKey)
 
