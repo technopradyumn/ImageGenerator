@@ -9,7 +9,7 @@ import kotlin.time.ExperimentalTime
 class MyApplication : Application() {
 
     // Define your OpenAI API key
-    private val apiKey = "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" // Replace with your actual API key
+    private val apiKey = "Actual OpenAI API key" // Replace with your actual API key
 
     @OptIn(ExperimentalTime::class)
     fun initOpenAI(): OpenAI {
