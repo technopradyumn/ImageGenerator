@@ -11,11 +11,12 @@
 
     <ImageView
         android:id="@+id/generated_image_view"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_marginBottom="160dp"
         android:scaleType="fitCenter"
+        android:src="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/textInputEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
