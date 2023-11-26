@@ -1,20 +1,12 @@
 package com.technopradyumn.imagegenerator
 
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
-import android.provider.MediaStore
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import androidx.core.content.FileProvider
+import androidx.appcompat.app.AppCompatActivity
 import com.aallam.openai.api.image.ImageCreation
 import com.aallam.openai.api.image.ImageSize
 import com.aallam.openai.client.OpenAI
@@ -33,7 +25,6 @@ import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
-    private var currentImageBitmap: Bitmap? = null
     private var currentImageUrl: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -177,7 +168,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun shareImage() {
+    private fun shareImage() {
         val intent= Intent(Intent.ACTION_SEND)
         intent.type="text/plain"
         intent.putExtra(Intent.EXTRA_TEXT, "Hey, Checkout this cool meme $currentImageUrl")
