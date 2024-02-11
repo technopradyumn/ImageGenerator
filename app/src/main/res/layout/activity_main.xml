@@ -38,7 +38,7 @@
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
-        android:src="@drawable/generate_ic"
+        android:src="@drawable/baseline_arrow_forward_24"
         app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textInputEditText"
