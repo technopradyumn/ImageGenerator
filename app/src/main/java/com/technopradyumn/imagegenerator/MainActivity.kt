@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val shareBtn: ImageView = findViewById(R.id.shareBtn)
 
         // Actual OpenAI API key
-        val apiKey = "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"
+        val apiKey = "Actual OpenAI API key"
 
         val openAI = OpenAI(apiKey)
 
@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity() {
                                     val imageUrl = images[0].url
                                     loadAndDisplayImage(imageUrl, imageView)
                                     currentImageUrl = imageUrl
+
 
                                 } else {
                                     showErrorMessage("No images found.")
