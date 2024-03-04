@@ -1,11 +1,13 @@
 package com.technopradyumn.imagegenerator
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.aallam.openai.api.image.ImageCreation
 import com.aallam.openai.api.image.ImageSize
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val shareBtn: ImageView = findViewById(R.id.shareBtn)
 
         // Actual OpenAI API key
-        val apiKey = "Actual OpenAI API key"
+        val apiKey = "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"
 
         val openAI = OpenAI(apiKey)
 
@@ -64,7 +66,6 @@ class MainActivity : AppCompatActivity() {
                                     val imageUrl = images[0].url
                                     loadAndDisplayImage(imageUrl, imageView)
                                     currentImageUrl = imageUrl
-
 
                                 } else {
                                     showErrorMessage("No images found.")
@@ -135,6 +136,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    @RequiresApi(Build.VERSION_CODES.FROYO)
     private fun saveImageToExternalStorage(url: String) {
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
         val fileName = "image_$timeStamp.png"
